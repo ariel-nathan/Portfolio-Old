@@ -1,0 +1,223 @@
+@font-face {
+  font-family: "Pixelized";
+  src: url("./FreePixel.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Pixelized", monospace;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+}
+
+table,
+th,
+td {
+  font-size: 1.3rem;
+  text-align: center;
+  width: 20%;
+  border: 1px solid black;
+}
+
+.ribbon {
+  width: 100%;
+  height: 3vh;
+  background: rgb(141, 141, 141);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ribbon ul {
+  display: flex;
+}
+
+.ribbon li {
+  margin: 1rem;
+}
+
+.ribbon h3 {
+  font-size: 2rem;
+}
+
+.time {
+  margin-right: 1rem;
+}
+
+.desktop {
+  overflow: hidden;
+  width: 100%;
+  height: 97vh;
+  z-index: -1;
+}
+
+.background {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: lightgray;
+  z-index: -2;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+.background h1 {
+  font-size: 10rem;
+}
+
+.file {
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  z-index: 1;
+  text-align: center;
+}
+
+.file img {
+  height: 75px;
+  width: 75px;
+  pointer-events: none;
+}
+
+.file p {
+  font-size: 1.5rem;
+  pointer-events: none;
+}
+
+.file a {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.aboutme {
+  top: 65%;
+  left: 15%;
+}
+
+.resume {
+  top: 29%;
+  left: 36%;
+}
+
+.projects {
+  top: 70%;
+  left: 70%;
+}
+
+.recycle {
+  top: 5%;
+  left: 1%;
+}
+
+.donotopen {
+  top: 5%;
+  left: 1%;
+}
+
+.beatmaker {
+  top: 5%;
+  left: 31%;
+}
+
+.selected {
+  background: rgba(116, 115, 115, 0.5);
+}
+
+.window {
+  background: lightgray;
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  height: 60%;
+  width: 70%;
+  overflow: visible;
+  z-index: 102;
+  border: 1px solid black;
+}
+
+.window-ribbon {
+  background: gray;
+  max-height: 3vh;
+  display: flex;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.ribbon-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  background: lightgrey;
+  height: 15px;
+  width: 15px;
+  box-shadow: 0px 0px 0px 2px;
+  font-size: 1rem;
+  margin: 0.5rem;
+  cursor: pointer;
+}
+
+.window-content {
+  width: 100%;
+  height: 95.5%;
+  background: lightgray;
+}
+
+.front {
+  z-index: 1000;
+}
+
+.projectstable {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+}
+
+.projectstable table {
+  width: 100%;
+  height: 50%;
+}
+
+.website {
+  text-align: center;
+}
+
+.website img {
+  height: 75px;
+  width: 75px;
+  pointer-events: none;
+}
+
+.website p {
+  font-size: 1.5rem;
+  pointer-events: none;
+}
+
+.website a {
+  position: absolute;
+  width: 75px;
+  height: 75px;
+}
+
+.projectstable table tr td a {
+  text-decoration: underline;
+}

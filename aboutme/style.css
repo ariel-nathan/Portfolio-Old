@@ -1,0 +1,17 @@
+li {
+  display: flex;
+  align-items: center;
+}
+
+li h3 {
+  padding-right: 1rem;
+}
+
+table,
+th,
+td {
+  font-size: 1.3rem;
+  text-align: center;
+  width: 20%;
+  border: 1px solid black;
+}
