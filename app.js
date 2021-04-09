@@ -20,33 +20,49 @@ $(".file").click(function () {
 
 $(".file").dblclick(function (e) {
   fileName = e.target.childNodes[3].innerText;
-  openFile(fileName);
+  openFile(fileName, e);
 });
 
 //Functions
-function openFile(fileName) {
+function openFile(fileName, e) {
   let app;
+  let appType;
 
   if (fileName === "About-Me.txt") {
     app = "./aboutme/";
+    appType = "website";
   }
   if (fileName === "Projects") {
     app = "./projects/";
+    appType = "website";
   }
   if (fileName === "Recycle Bin") {
     app = "./recyclebin";
+    appType = "website";
   }
   if (fileName === "DO NOT OPEN!") {
     app = "../index.html";
+    appType = "website";
   }
   if (fileName === "Resume.pdf") {
     return;
   }
   if (fileName === "Lola.png") {
+    app = "./lola/lola.html";
+    appType = "image";
+  }
+  if (fileName === "3D Sneaker") {
+    app = "./3dsneaker";
+    appType = "website";
+  }
+  if (e.target.classList.contains("tictactoe")) {
+    console.log("ho");
+    app = "./tictactoe/tictactoe.html";
+    appType = "website";
   }
 
   $(".desktop").append(
-    `<div class="window website"><div class="window-ribbon"><div class="ribbon-item close">x</div><div class="ribbon-item minimize">--</div><div class="ribbon-item expand">+</div></div><div class="window-content" id="window-content"><iframe width="100%" height="100%" src="${app}"></iframe></div></div>`
+    `<div class="window ${appType}"><div class="window-ribbon"><div class="ribbon-item close">x</div><div class="ribbon-item minimize">--</div><div class="ribbon-item expand">+</div></div><div class="window-content"><iframe src="${app}"></iframe></div></div>`
   );
 
   //Cursor
@@ -61,7 +77,7 @@ function openFile(fileName) {
     e.target.parentNode.parentNode.remove();
   });
 
-  $(".window-content").click(function () {
+  $(".window-ribbon").click(function () {
     $(".front").removeClass("front");
     $(this).addClass("front");
   });

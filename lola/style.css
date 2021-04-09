@@ -1,0 +1,15 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.loladiv {
+  background-image: url("../img/lola.jpeg");
+  background-position: center;
+  background-size: 80%;
+  background-repeat: no-repeat;
+
+  width: 100%;
+  height: 100vh;
+}
