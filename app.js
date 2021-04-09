@@ -5,6 +5,8 @@ $(".window").draggable({ containment: "parent" });
 //Cursor
 $("body").css({ cursor: "url(/img/select.cur), default" });
 $(".file").css({ cursor: "url(/img/pointer.cur), pointer" });
+$(".file a").css({ cursor: "url(/img/pointer.cur), pointer" });
+$(".ribbon ul li a").css({ cursor: "url(/img/pointer.cur), pointer" });
 
 //Events
 $(".background").click(function () {
