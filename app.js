@@ -7,10 +7,14 @@ $("body").css({ cursor: "url(/img/select.cur), default" });
 $(".file").css({ cursor: "url(/img/pointer.cur), pointer" });
 $(".file a").css({ cursor: "url(/img/pointer.cur), pointer" });
 $(".ribbon ul li a").css({ cursor: "url(/img/pointer.cur), pointer" });
+$(".fileBtn").css({ cursor: "url(/img/pointer.cur), pointer" });
+$(".goBtn").css({ cursor: "url(/img/pointer.cur), pointer" });
+$(".viewBtn").css({ cursor: "url(/img/pointer.cur), pointer" });
 
 //Events
 $(".background").click(function () {
   $(".selected").removeClass("selected");
+  $(".show").removeClass("show");
 });
 
 $(".file").click(function () {
@@ -21,6 +25,21 @@ $(".file").click(function () {
 $(".file").dblclick(function (e) {
   fileName = e.target.childNodes[3].innerText;
   openFile(fileName, e);
+});
+
+$(".showAbtMe").click(function (e) {
+  openFile("About-Me.txt", e);
+  $(".show").removeClass("show");
+});
+
+$(".showProj").click(function (e) {
+  openFile("Projects", e);
+  $(".show").removeClass("show");
+});
+
+$(".fileBtn").click(function () {
+  $(".show").removeClass("show");
+  $(".fileMenu").addClass("show");
 });
 
 //Functions
@@ -56,7 +75,6 @@ function openFile(fileName, e) {
     appType = "website";
   }
   if (e.target.classList.contains("tictactoe")) {
-    console.log("ho");
     app = "./tictactoe/tictactoe.html";
     appType = "website";
   }

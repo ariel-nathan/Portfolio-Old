@@ -47,6 +47,13 @@ a {
   padding: 1rem;
 }
 
+.ribbon button {
+  font-family: "Pixelized", monospace;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+}
+
 .time {
   font-size: 2rem;
   margin-right: 1rem;
@@ -202,6 +209,35 @@ iframe {
   z-index: 1000;
 }
 
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.fileMenu,
+.goMenu,
+.viewMenu {
+  display: none;
+  position: absolute;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 5;
+}
+
+.fileMenu a,
+.goMenu a,
+.viewMenu a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  font-size: 1.5rem;
+}
+
+.show {
+  display: block;
+}
+
 @media screen and (max-width: 695px) {
   .ribbon ul {
     font-size: 1.5rem;
@@ -221,8 +257,11 @@ iframe {
   }
 
   .sneaker {
-    top: 10%;
-    left: 68%;
+    display: none;
+  }
+
+  .tictactoe {
+    display: none;
   }
 }
 
@@ -238,10 +277,26 @@ iframe {
   .time {
     font-size: 1.5rem;
   }
+
+  .ribbon button {
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (max-width: 477px) {
+  .ribbon button {
+    font-size: 0.8rem;
+  }
+  .logo {
+    font-size: 1rem;
+  }
+  .time {
+    font-size: 1rem;
+  }
 }
 
 @media screen and (max-width: 411px) {
-  .ribbon ul {
+  .logo {
     font-size: 1rem;
   }
 
@@ -260,5 +315,18 @@ iframe {
   .tictactoe {
     left: 5%;
     top: 48%;
+  }
+
+  .ribbon button {
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (max-width: 379px) {
+  .logo {
+    font-size: 0.8rem;
+  }
+  .time {
+    font-size: 0.8rem;
   }
 }
