@@ -42,6 +42,12 @@ $(".fileBtn").click(function () {
   $(".fileMenu").addClass("show");
 });
 
+//Mobile
+$(".file").doubletap(function (e) {
+  fileName = e.target.childNodes[3].innerText;
+  openFile(fileName, e);
+});
+
 //Functions
 function openFile(fileName, e) {
   let app;
