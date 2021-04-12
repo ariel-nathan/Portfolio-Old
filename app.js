@@ -23,6 +23,7 @@ $(".file").click(function () {
 });
 
 $(".file").dblclick(function (e) {
+  console.log("doubleclick");
   fileName = e.target.childNodes[3].innerText;
   openFile(fileName, e);
 });
@@ -44,6 +45,7 @@ $(".fileBtn").click(function () {
 
 //Mobile
 $(".file").doubletap(function (e) {
+  console.log("double tap");
   fileName = e.target.childNodes[3].innerText;
   openFile(fileName, e);
 });
@@ -86,7 +88,7 @@ function openFile(fileName, e) {
   }
 
   $(".desktop").append(
-    `<div class="window ${appType}"><div class="window-ribbon"><div class="ribbon-item close">x</div><div class="ribbon-item minimize">--</div><div class="ribbon-item expand">+</div></div><div class="window-content"><iframe src="${app}"></iframe></div></div>`
+    `<div class="window ${appType}"><div class="window-ribbon"><div class="ribbon-item close">x</div><div class="ribbon-item minimize">-</div><div class="ribbon-item expand">+</div></div><div class="window-content"><iframe src="${app}"></iframe></div></div>`
   );
 
   //Cursor
