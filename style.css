@@ -238,6 +238,10 @@ iframe {
   display: block;
 }
 
+.showAbtMe {
+  margin-top: 1rem;
+}
+
 @media screen and (max-width: 695px) {
   .ribbon ul {
     font-size: 1.5rem;
